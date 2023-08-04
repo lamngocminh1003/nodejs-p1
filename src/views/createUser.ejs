@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodejs Basic</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/create-user" class="active">Create user</a>
+      <a href="/upload-imgs">Upload images</a>
+    </div>
+    <div class="title">
+      <h1>Create user</h1>
+    </div>
+    <div class="create-user-form">
+      <form action="/create" method="post">
+        <label for="fname">First Name</label>
+        <input
+          class="input-create-item"
+          type="text"
+          id="fname"
+          name="firstName"
+          placeholder="Enter your first name"
+        />
+        <label for="lname">Last Name</label>
+        <input
+          placeholder="Enter your last name"
+          class="input-create-item"
+          id="fname"
+          name="lastName"
+          type="text"
+        />
+        <label for="email">Email</label>
+        <input
+          placeholder="Enter your email"
+          class="input-create-item"
+          type="email"
+          name="email"
+        />
+        <label for="address">Address</label>
+        <input
+          placeholder="Enter your address"
+          class="input-create-item"
+          type="text"
+          name="address"
+        />
+        <input class="create-user" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

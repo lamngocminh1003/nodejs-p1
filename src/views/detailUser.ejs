@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodejs Basic</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="#news">Create user</a>
+    </div>
+    <div class="title">
+      <h1>Detail user</h1>
+    </div>
+    <div class="detail-user-form">
+      <form action="/" method="get">
+        <label for="fname">First Name</label>
+        <input
+          class="input-item"
+          type="text"
+          id="fname"
+          name="firstName"
+          value="<%= data.firstName %>"
+          readonly
+        />
+        <label for="lname">Last Name</label>
+        <input
+          class="input-item"
+          id="fname"
+          name="lastName"
+          value="<%=data.lastName %>"
+          readonly
+        />
+        <label for="email">Email</label>
+        <input
+          class="input-item"
+          type="email"
+          name="email"
+          value="<%=data.email %>"
+          readonly
+        />
+        <label for="address">Address</label>
+        <input
+          class="input-item"
+          type="text"
+          name="address"
+          value="<%= data.address %>"
+          readonly
+        />
+        <input class="create-user" type="submit" value="Back home" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodejs Basic</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/create-user">Create user</a>
+      <a href="/upload-imgs">Upload images</a>
+    </div>
+    <div class="title">
+      <h1>List user</h1>
+    </div>
+    <div class="table-users">
+      <table class="w3-table-all w3-hoverable">
+        <thead>
+          <tr class="w3-light-green">
+            <th>STT</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th class="action">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let i=0; i < data.length; i++) { %>
+          <tr>
+            <td><%= data[i].userId %></td>
+            <td><%= data[i].lastName %></td>
+            <td><%= data[i].firstName %></td>
+            <td class="action">
+              <a href="/detail-user/<%= data[i].userId %>">
+                <button class="btn btn-info" type="button">
+                  <i class="fas fa-info-circle"></i>
+                </button>
+              </a>
+              <a href="/update-user/<%= data[i].userId %>">
+                <button class="btn btn-update" type="button">
+                  <i class="fas fa-edit"></i>
+                </button>
+              </a>
+              <form action="/delete" method="post">
+                <input
+                  class="input-create-item"
+                  type="text"
+                  id="id"
+                  name="userId"
+                  value="<%= data[i].userId %>"
+                  hidden
+                />
+                <button class="btn btn-delete" type="submit">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

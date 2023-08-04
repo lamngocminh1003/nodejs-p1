@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodejs Basic</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="topnav">
+      <a href="/">Home</a>
+      <a href="/create-user">Create user</a>
+      <a href="/upload-imgs" class="active">Upload images</a>
+    </div>
+    <div class="title">
+      <h1>Upload images</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <span class="title-img">
+          <h3>Chọn 1 ảnh:</h3>
+        </span>
+        <span>
+          <input id="img" type="file" name="img" />
+        </span>
+        <div>
+          <input class="upload-imgs" type="submit" value="Upload" />
+        </div>
+      </form>
+      <div class="line"></div>
+      <form
+        action="/upload-multiple"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <span class="title-img">
+          <h3>Chọn nhiều ảnh:</h3>
+        </span>
+        <span>
+          <input id="img" type="file" name="mul-img" multiple />
+        </span>
+        <div>
+          <input class="upload-imgs" type="submit" value="Upload" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

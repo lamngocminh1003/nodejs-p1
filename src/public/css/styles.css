@@ -1,0 +1,230 @@
+.title {
+  color: rgb(15, 166, 40);
+  text-align: center;
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+.table-users {
+  margin: 0 20px;
+}
+.w3-light-green {
+  background-color: #5aff4e !important;
+}
+
+.w3-table-all tr:nth-child(even) {
+  background-color: #d1ffdd !important;
+}
+.w3-table-all tr:nth-child(even):hover {
+  background-color: #97b69f !important;
+}
+.w3-table-all tr:nth-child(odd):hover {
+  background-color: #b3d7bc;
+}
+
+.action {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.btn-update {
+  background-color: rgb(247, 127, 42);
+  color: wheat;
+  border: 1px solid rgb(247, 127, 42);
+}
+.btn-update:hover {
+  background-color: rgb(227, 111, 28);
+  color: rgb(220, 198, 159);
+  border: 1px solid rgb(227, 111, 28);
+}
+.btn-delete {
+  background-color: rgb(201, 52, 52);
+  border: 1px solid rgb(201, 52, 52);
+  color: wheat;
+}
+.btn-delete:hover {
+  background-color: rgb(191, 46, 46);
+  border: 1px solid rgb(191, 46, 46);
+  color: rgb(220, 198, 159);
+}
+.btn-info {
+  background-color: rgb(55, 185, 217);
+  border: 1px solid rgb(55, 185, 217);
+  color: wheat;
+}
+.btn-info:hover {
+  background-color: rgb(51, 174, 205);
+  border: 1px solid rgb(51, 174, 205);
+  color: rgb(220, 198, 159);
+}
+.detail-user-form {
+  border-radius: 5px;
+  background-color: #d3f0d6;
+  padding: 20px;
+  margin: 0 30px;
+}
+.input-item {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: context-menu;
+}
+.create-user-form {
+  border-radius: 5px;
+  background-color: #d3f0d6;
+  padding: 20px;
+  margin: 0 30px;
+}
+.input-create-item {
+  width: 100%;
+  padding: 5px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: text;
+}
+.create-user {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.create-user:hover {
+  background-color: #45a049;
+}
+.update-user {
+  width: 100%;
+  background-color: #e69c2e;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.update-user:hover {
+  background-color: #ef9c1e;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+.title-img {
+  margin-right: 10px;
+}
+.upload-imgs {
+  margin: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: rgb(63, 243, 90);
+  border: 1px solid rgb(63, 243, 90);
+  color: rgb(110, 98, 78);
+}
+
+.upload-imgs:hover {
+  margin: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: rgb(56, 218, 80);
+  border: 1px solid rgb(56, 218, 80);
+  color: rgb(112, 101, 82);
+}
+.line {
+  border: 2px solid #333;
+  margin: 20px 0;
+}
+/*======================
+    404 page
+=======================*/
+
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+
+.page_404 img {
+  width: 100%;
+}
+
+.four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  background-position: center;
+}
+
+.four_zero_four_bg h1 {
+  font-size: 80px;
+  text-align: center;
+}
+.four_zero_four {
+  text-align: center;
+  font-size: 80px;
+}
+.four_zero_four_bg h3 {
+  font-size: 80px;
+}
+
+.link_404 {
+  color: #fff !important;
+  padding: 10px 20px;
+  background: #39ac31;
+  margin: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+}
+.contant_box_404 {
+  text-align: center;
+}
