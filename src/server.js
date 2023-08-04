@@ -2,16 +2,16 @@ import configViewEngine from "./configs/viewEngine";
 require("dotenv").config();
 import initWebRoute from "./routes/web";
 import initAPIRoute from "./routes/api";
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 8000;
-app.use((req, res, next) => {
-  console.log("run into my middleware method");
-  console.log(req.method);
-  next();
-});
-app.use(morgan("combined"));
+// app.use((req, res, next) => {
+//   console.log("run into my middleware method");
+//   console.log(req.method);
+//   next();
+// });
+// app.use(morgan("combined"));
 
 // support parsing of application/json type post data
 app.use(express.json());

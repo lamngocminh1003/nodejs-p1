@@ -1,11 +1,14 @@
 import connection from "../configs/connectDB";
-import { getDetailUserService } from "../services/CRUDService";
-const multer = require("multer");
+import {
+  getDetailUserService,
+  getAllUsers,
+  createUserService,
+  updateUserService,
+} from "../services/CRUDService";
 
 let getHomePage = async (req, res) => {
-  //c2 xài promises
-  const [rows, fields] = await connection.execute("SELECT * FROM `users`");
-  return res.render("index", { data: rows });
+  let data = await getAllUsers();
+  return res.render("index", { data: data });
 };
 let getDetailUser = async (req, res) => {
   let userId = req.params.userId;
@@ -16,12 +19,7 @@ let getCreateUserPage = async (req, res) => {
   return res.render("createUser");
 };
 let postCreateUser = async (req, res) => {
-  let { lastName, firstName, email, address } = req.body;
-  console.log("check ", lastName, firstName, email, address);
-  await connection.execute(
-    "INSERT INTO users (lastName, firstName, email, address) VALUES (?,?,?,?);",
-    [lastName, firstName, email, address]
-  );
+  await createUserService(req.body);
   return res.redirect("/");
 };
 let getUpdateUserPage = async (req, res) => {
@@ -30,11 +28,7 @@ let getUpdateUserPage = async (req, res) => {
   return res.render("updateUser", { data: data });
 };
 let postUpdateUser = async (req, res) => {
-  let { userId, lastName, firstName, email, address } = req.body;
-  await connection.execute(
-    "UPDATE users SET lastName=?, firstName=?, email=?, address=? WHERE userId =? ;",
-    [lastName, firstName, email, address, userId]
-  );
+  await updateUserService(req.body);
   return res.redirect("/");
 };
 let postDeleteUser = async (req, res) => {
